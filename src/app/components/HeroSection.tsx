@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+
 import React from "react";
 import Image from "next/image";
 import profilimage from "../../public/image.png";
@@ -14,7 +16,7 @@ const HeroSection = () => {
           alt="Contact Background"
           layout="fill"
           objectFit="cover"
-          // className="opacity-60"
+         
         />
       </div>
         <div className=" sm:flex  sm:px-32 px-10 py-10 sm:pt-44 sm:py-32 items-center">
@@ -27,17 +29,17 @@ const HeroSection = () => {
             height={200}
           />
           <div className=" text-white pr-4 ">
-            <h3 className=" sm:text-2xl text-purple-400 opacity-95">hello it's me,</h3>
+            <h3 className=" sm:text-2xl text-purple-400 opacity-95">hello it&apos;s me,</h3>
             <h1 className="text-2xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-tl from-white to-cyan-500 opacity-95">
               NOMAN RAJAR
             </h1>
             <h3 className="sm:text-2xl text-slate-900 typing-container ">
               <span className="typing-text text-frontend text-2xl sm:text-3xl opacity-95 ">
-                I'm a Frontend Developer{" "}
+                I&apos;m a Frontend Developer
                 <span className="typing-text text-designer text-2xl sm:text-3xl opacity-95">
-                  {" "}
+                 
                   & Web Designer
-                </span>{" "}
+                </span>
               </span>
             </h3>
 
