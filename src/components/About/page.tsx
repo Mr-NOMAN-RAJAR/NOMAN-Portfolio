@@ -56,7 +56,7 @@ const About = () => {
               <h3 className="text-2xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
                 Skills
               </h3>
-              <ul className="flex flex-wrap gap-4 text-white font-medium">
+              <ul className="flex flex-wrap  gap-4 text-white font-medium">
                 <li className="flex items-center bg-gradient-to-r from-indigo-500 to-purple-500 px-5 py-2 rounded-lg shadow-md">
                   <IoLogoHtml5 className="size-6" />
                   Html5

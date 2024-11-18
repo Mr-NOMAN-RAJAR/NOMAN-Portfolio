@@ -8,7 +8,7 @@ function Project() {
         <h2 className=" text-3xl font-medium text-center mb-8 text-yellow-50">
           Projects
         </h2>
-        <div className=" grid gap-8 lg:grid-cols-2 max-w-5xl mx-auto px-4">
+        <div className=" grid gap-8 lg:grid-cols-2 max-w-6xl mx-auto px-4">
           <div className="blocks-div bg-gradient-to-r from-indigo-400 to-purple-700 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300">
             <h3 className="text-2xl font-semibold mb-2 ">
               Dynamic Resume Builder
@@ -36,7 +36,7 @@ function Project() {
             </ul>
             <div className="flex justify-between items-center">
               <a
-                href="https://yourresumeapp.com"
+                href="https://resume-builder-tilv.vercel.app/"
                 target="_blank"
                 className="flex gap-1 items-center text-black hover:text-blue-100 font-bold"
               >
@@ -85,7 +85,7 @@ function Project() {
             </ul>
             <div className="flex justify-between items-center ">
               <a
-                href="https://yourresumeapp.com"
+                href="https://todolist-app-kohl.vercel.app/"
                 target="_blank"
                 className="flex gap-1 items-center text-black font-semibold hover:text-blue-100 "
               >
@@ -133,7 +133,7 @@ function Project() {
             </ul>
             <div className="flex justify-between items-center ">
               <a
-                href="https://yourresumeapp.com"
+                href="https://todolist-app-kohl.vercel.app/"
                 target="_blank"
                 className="flex gap-1 items-center text-black font-semibold hover:text-blue-100 "
               >
@@ -181,7 +181,7 @@ function Project() {
             </ul>
             <div className="flex justify-between items-center">
               <a
-                href="https://yourresumeapp.com"
+                href="https://noman-portfolioweb.vercel.app/"
                 target="_blank"
                 className="flex gap-1 items-center text-black font-bold hover:text-blue-100"
               >

@@ -46,7 +46,7 @@ const Contact = () => {
             </div>
           </div>
 
-          <div className="flex  space-x-8 mt-16 ">
+          <div className="flex  sm:space-x-8 space-x-2 mt-16 ">
             <a
               href="https://www.linkedin.com/in/noman-rajar-5351bb2b4/?lipi=urn%3Ali%3Apage%3Afeed_index_index%3B5aa556d8-bf4e-4d57-b1cd-eee6cc1d81be"
               target="_blank"
@@ -61,7 +61,7 @@ const Contact = () => {
               rel="noopener noreferrer"
               className="text-gray-600 hover:text-gray-900 transition-colors"
             >
-              <FaGithub size={34} />
+              <FaGithub size={28} />
             </a>
             <a
               href="mailto:nomanrajar13@gmail.com"

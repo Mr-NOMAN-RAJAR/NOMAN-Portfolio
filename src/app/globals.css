@@ -40,3 +40,13 @@
 .block-div {
   animation: appear 1s linear; /* Added duration for the animation */
 }
+
+.name-shadow {
+  text-shadow: 2px 1px 1px rgb(39, 1, 255); /* Simple shadow */
+}
+
+@media (min-width: 325px) {
+ nomi {
+      background-color: chartreuse;
+  }
+}
