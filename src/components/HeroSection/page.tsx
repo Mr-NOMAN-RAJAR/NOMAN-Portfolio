@@ -139,8 +139,8 @@ const HeroSection = () => {
             <Image
               src="/image.png"
               alt="image"
-              width={800} // Increase the size for larger screens
-              height={200} // Increase the size for larger screens
+              width={800}
+              height={200}
               className="rounded-full"
             />
           </motion.div>
