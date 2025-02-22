@@ -25,6 +25,25 @@ const Contact = () => {
   return (
     <section id="Contect" className="bg-slate-950 py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <span className="text-cyan-400 text-sm font-medium tracking-wider uppercase mb-3 block">
+            Get In Touch
+          </span>
+          <h2 className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-teal-400 mb-4">
+            Contact Me
+          </h2>
+          <p className="text-gray-400 text-sm sm:text-base max-w-xl mx-auto">
+            Feel free to reach out for collaborations, opportunities, or just to say hello. I'm always open to discussing new projects and ideas.
+          </p>
+        </motion.div>
+
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
           {/* Left Side - Info */}
