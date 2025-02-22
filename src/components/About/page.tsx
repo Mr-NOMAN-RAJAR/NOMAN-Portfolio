@@ -1,113 +1,88 @@
+'use client';
 import React from "react";
 import Image from "next/image";
-import { IoLogoCss3, IoLogoHtml5 } from "react-icons/io";
-import { SiTailwindcss, SiTypescript } from "react-icons/si";
-import { BiLogoTypescript } from "react-icons/bi";
-import { FaFigma, FaReact } from "react-icons/fa";
-import { RiNextjsLine } from "react-icons/ri";
+import { motion } from "framer-motion";
 
 const About = () => {
   return (
-    <>
-      <section
-        id="About"
-        className="bg-slate-950 py-20 px-6 md:px-10 lg:px-20 text-white"
-      >
-        <div id="block" className="max-w-5xl mx-auto">
-          {/* Section Title */}
-          <h2 className="text-3xl md:text-4xl  text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600">
-            About Me
-          </h2>
+    <section
+      id="About"
+      className="bg-slate-950 py-20 px-4 sm:px-6 lg:px-8"
+    >
+      <div className="max-w-6xl mx-auto">
+        {/* Section Title */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16 text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600"
+        >
+          About Me
+        </motion.h2>
 
-          {/* Main Content */}
-          <div className="flex flex-col md:flex-row items-center md:items-start gap-12">
-            {/* Profile Image */}
-            <div className="w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl border-4 border-indigo-500">
-              <Image
-                className="scale-x-[-1] w-44 h-44 md:w-56 md:h-56 rounded-full overflow-hidden shadow-xl  border-gray-300"
-                src="/image.png"
-                alt="image"
-                width={150}
-                height={150}
-              />
-            </div>
-
-            {/* About Text */}
-            <div className="text-center md:text-left max-w-3xl ">
-              <p className="text-lg md:text-xl leading-relaxed mb-6 text-gray-300">
-                Hi, I’m{" "}
-                <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-pink-600">
-                  Noman
-                </span>
-                . As a dedicated web developer, I bring together skills in{" "}
-                <span className="font-semibold">HTML, CSS, TypeScript</span>,
-                and more. My goal is to design engaging, high-quality web
-                experiences that meet modern standards.
-              </p>
-              <p className="text-lg md:text-xl leading-relaxed mb-6 text-gray-300">
-                With a strong foundation in web technologies, I continually
-                strive to learn and apply the latest trends in development. I
-                believe in the power of clean code and thoughtful design to
-                create intuitive user experiences.
-              </p>
-
-              {/* Skills */}
-
-              <h3 className="text-2xl font-semibold mb-4 text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500">
-                Skills
-              </h3>
-              <ul className="flex flex-wrap  gap-4 text-white font-medium">
-                <li className="flex items-center bg-gradient-to-r from-indigo-500 to-purple-500 px-5 py-2 rounded-lg shadow-md">
-                  <IoLogoHtml5 className="size-6" />
-                  Html5
-                </li>
-                <li className="flex items-center bg-gradient-to-r from-indigo-500 to-purple-500 px-5 py-2 rounded-lg shadow-md">
-                  <IoLogoCss3 className="size-6" />
-                  Css
-                </li>
-                <li className="flex items-center bg-gradient-to-r from-indigo-500 to-purple-500 px-5 py-2 rounded-lg shadow-md">
-                  <SiTailwindcss className="size-6" />
-                  TailwendCss
-                </li>
-
-                <li className="flex items-center bg-gradient-to-r from-indigo-500 to-purple-500 px-5 py-2 rounded-lg shadow-md">
-                  <BiLogoTypescript className="size-6" />
-                  TypeScript
-                </li>
-                <li className="flex items-center bg-gradient-to-r from-indigo-500 to-purple-500 px-5 py-2 rounded-lg shadow-md">
-                  <FaReact className="size-6" />
-                  React
-                </li>
-             
-             
-              <li className="flex items-center bg-gradient-to-r from-indigo-500 to-purple-500 px-5 py-2 rounded-lg shadow-md">
-              <RiNextjsLine className="size-6"/>
-              Next.js
-                </li>
-               
-             
-              <li className="flex items-center bg-gradient-to-r from-indigo-500 to-purple-500 px-5 py-2 rounded-lg shadow-md">
-                  <FaFigma  className="size-6"/>
-
-                  Figma
-                </li>
-               
-              </ul>
-            </div>
-          </div>
-
-          {/* Call to Action */}
-          <div className="text-center mt-16">
-            <a
-              href="#Contact"
-              className="inline-block bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-10 py-3 text-lg font-semibold rounded-full shadow-lg hover:from-pink-600 hover:to-indigo-600 transition-colors"
+        {/* Main Content */}
+        <div className="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-16">
+          {/* About Text */}
+          <div className="flex-1 space-y-6">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="space-y-6"
             >
-              Connect with Me
-            </a>
+              <h3 className="text-2xl md:text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-cyan-200">
+                Frontend Developer & UI/UX Enthusiast
+              </h3>
+              
+              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                I'm a passionate Frontend Developer with expertise in creating responsive and intuitive web applications. With a strong foundation in modern web technologies and a keen eye for design, I transform ideas into seamless digital experiences.
+              </p>
+              
+              <p className="text-gray-300 text-base md:text-lg leading-relaxed">
+                My approach combines clean code practices with creative problem-solving to build user-friendly interfaces that not only look great but also perform exceptionally well. I'm constantly learning and adapting to new technologies to stay at the forefront of web development.
+              </p>
+            </motion.div>
           </div>
+
+          {/* Profile Image */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true }}
+            className="relative w-64 h-64 lg:w-80 lg:h-80"
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-indigo-600 to-pink-600 rounded-2xl rotate-6"></div>
+            <Image
+              className="relative rounded-2xl object-cover w-full h-full"
+              src="/image.png"
+              alt="Noman Rajar - Frontend Developer"
+              width={320}
+              height={320}
+              priority
+            />
+          </motion.div>
         </div>
-      </section>
-    </>
+
+        {/* Call to Action */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <a
+            href="#Contact"
+            className="inline-block bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-8 py-3 rounded-xl text-lg font-semibold shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 hover:-translate-y-1"
+          >
+            Let's Work Together
+          </a>
+        </motion.div>
+      </div>
+    </section>
   );
 };
 

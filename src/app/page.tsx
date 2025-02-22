@@ -5,6 +5,7 @@ import Header from "@/components/Header/page";
 import HeroSection from "@/components/HeroSection/page";
 import Project from "@/components/Projects1/page";
 import Services from "@/components/Services1/page";
+import Skills from "@/components/Skills/page";
 import React from "react";
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
       <Header />
       <HeroSection />
       <About />
+      <Skills />
       <Project />
       <Services />
       <Contact />

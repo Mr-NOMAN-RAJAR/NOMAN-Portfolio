@@ -5,148 +5,134 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { HiOutlineDownload } from "react-icons/hi";
 import { VscGithub } from "react-icons/vsc";
-import { SiLinkedin } from "react-icons/si";
-import { FaInstagramSquare, FaLinkedin } from "react-icons/fa";
-import { FaSquareInstagram } from "react-icons/fa6";
+import { FaLinkedin, FaSquareInstagram } from "react-icons/fa6";
 
 const HeroSection = () => {
+  const socialLinks = [
+    {
+      href: "https://www.instagram.com/noman_rajar10",
+      icon: <FaSquareInstagram />,
+      label: "Instagram",
+    },
+    {
+      href: "https://www.linkedin.com/in/noman-rajar-5351bb2b4/",
+      icon: <FaLinkedin />,
+      label: "LinkedIn",
+    },
+    {
+      href: "https://github.com/Mr-Noman-Rajar",
+      icon: <VscGithub />,
+      label: "GitHub",
+    },
+  ];
+
   return (
-    <>
-      <main>
-        <div className=" bg-slate-950 sm:flex sm:px-32 px-4 py-10 sm:pt-44 sm:py-32 items-center ">
-          <motion.div
-            initial={{ opacity: 0, x: -100 }} // Slide from left
-            animate={{ opacity: 1, x: 0 }} // Fade in and slide to center
-            transition={{ duration: 1 }}
-            className="sm:hidden sm:ml-48  sm:mt-20 ml-48 mt-14 p-1 justify-end items-center sm:m-0  "
+    <main className="min-h-screen bg-slate-950 flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-12">
+      <div className="max-w-7xl mx-auto w-full flex flex-col-reverse sm:flex-row items-center justify-between gap-8 sm:gap-12">
+        {" "}
+        {/* Text Content */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="flex-1 text-center sm:text-left"
+        >
+          <motion.h3
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-purple-400 text-base sm:text-lg lg:text-xl mb-2"
           >
-            <Image
-              src="/image.png"
-              alt="image"
-              width={200}
-              height={200}
-              className="rounded-full shadow-lg shadow-green-400 border-green-400 border-2 p-1 "
-            />
-          </motion.div>
+            Hello, it's me
+          </motion.h3>
 
-          <div className="text-white pr-4 ">
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 1, delay: 0.3 }}
-              className="sm:text-2xl text-xs text-purple-400 opacity-95"
-            >
-              hello its me,
-            </motion.h3>
+          <motion.h1
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-3xl sm:text-4xl lg:text-5xl font-bold text-cyan-300 mb-3"
+          >
+            NOMAN RAJAR
+          </motion.h1>
 
-            <motion.h1
-              initial={{ opacity: 0, x: -100 }} // Slide from left
-              animate={{ opacity: 1, x: 0 }} // Fade in and slide to center
-              transition={{ duration: 1, delay: 0.5 }}
-              className="text-2xl py-1 name-shadow sm:text-4xl font-semibold  text-cyan-300 "
-            >
-              NOMAN RAJAR
-            </motion.h1>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="text-xl sm:text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-cyan-300 to-cyan-200 bg-clip-text text-transparent mb-4"
+          >
+            I'm a Frontend Developer & Web Designer
+          </motion.h2>
 
-            <motion.h3
-              initial={{ opacity: 0, y: 20 }} // Fade in with upward movement
-              animate={{ opacity: 1, y: 0 }} // Final position
-              transition={{ duration: 1, delay: 0.7 }}
-              className="sm:text-2xl text-slate-900 "
-            >
-              <span className="text-transparent bg-clip-text bg-gradient-to-tl name-shadow from-cyan-300 to-cyan-200 font-light  text-frontend text-2xl sm:text-3xl opacity-95">
-                I&apos;m a Frontend Developer & Web Designer
-              </span>
-            </motion.h3>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.8 }}
+            className="text-gray-400 text-sm sm:text-base lg:text-lg max-w-2xl mb-8"
+          >
+            I specialize in creating clean, efficient, and responsive web
+            applications using TypeScript, JavaScript, HTML, CSS, and Node.js.
+            Passionate about UI/UX, I love bringing ideas to life through
+            seamless web experiences.
+          </motion.p>
 
-            <motion.p
-              initial={{ opacity: 0, y: 20 }} // Fade in with upward movement
-              animate={{ opacity: 1, y: 0 }} // Final position
-              transition={{ duration: 1, delay: 1 }}
-              className="text-sm sm:text-base leading-relaxed text-justify  text-gray-400 mt-2"
-            >
-              a passionate front-end web developer. I have honed my skills in a
-              variety of technologies, including TypeScript, JavaScript, HTML,
-              CSS, and Node.js. I love creating clean, efficient, and responsive
-              websites that provide a great user experience. Whether it is
-              coding up a new feature or optimizing performance, I am always
-              eager to take on new challenges and continue learning in this
-              ever-evolving field.
-            </motion.p>
-
-            <div className="flex justify-between md:justify-normal md:gap-2 sm:gap-4 sm:mt-6 mt-4">
-              <motion.button
-                initial={{ opacity: 0, scale: 0.8 }} // Initially small
-                animate={{ opacity: 1, scale: 1 }} // Fade in and scale to normal size
-                transition={{ duration: 0.5, delay: 1.5 }}
-                className="  hover:text-gray-500  "
-              >
-                <a
-                  href="https://www.instagram.com/noman_rajar10/?__pwa=1"
+          {/* Social Links & Resume Button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 1 }}
+            className="flex flex-col sm:flex-row items-center gap-6"
+          >
+            <div className="flex gap-4">
+              {socialLinks.map((link, index) => (
+                <motion.a
+                  key={index}
+                  href={link.href}
                   target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ scale: 1.1 }}
+                  whileTap={{ scale: 0.95 }}
+                  className="text-teal-300 hover:text-green-500 text-3xl sm:text-2xl md:text-3xl transition-colors duration-300"
+                  aria-label={link.label}
                 >
-                  <FaSquareInstagram className="size-8 sm:size-10 items-center text-teal-300 hover:text-green-500" />
-                </a>
-              </motion.button>
-
-              <motion.button
-                initial={{ opacity: 0, scale: 0.8 }} // Initially small
-                animate={{ opacity: 1, scale: 1 }} // Fade in and scale to normal size
-                transition={{ duration: 0.5, delay: 1.5 }}
-                className=" "
-              >
-                <a href="https://linkedin.com/in/Nomanrajar" target="_blank">
-                  <FaLinkedin className="size-8 sm:size-10  text-teal-300 hover:text-green-500" />{" "}
-                </a>
-              </motion.button>
-
-              <motion.button
-                initial={{ opacity: 0, scale: 0.8 }} // Initially small
-                animate={{ opacity: 1, scale: 1 }} // Fade in and scale to normal size
-                transition={{ duration: 0.5, delay: 1.5 }}
-                className=" "
-              >
-                <a href="https://github.com/Mr-Noman-Rajar" target="_blank">
-                  {" "}
-                  <VscGithub className="size-8 sm:size-10 items-center text-teal-300 hover:text-green-500" />{" "}
-                </a>
-              </motion.button>
-
-              <a
-                href="https://resume-builder-ten-red.vercel.app/"
-                target="_blank"
-              >
-                <motion.button
-                  initial={{ opacity: 0, scale: 0.8 }} // Initially small
-                  animate={{ opacity: 1, scale: 1 }} // Fade in and scale to normal size
-                  transition={{ duration: 0.5, delay: 1.5 }}
-                  className="flex items-center border-teal-300 hover:border-green-500 bg-black border-y-2 text-xs sm:text-base p-2 px-6 rounded-lg  font-light "
-                >
-                  <span className="pr-1 text-white ">Downlod Cv </span>{" "}
-                  <HiOutlineDownload className="sm:size-6 " />
-                </motion.button>
-              </a>
+                  {link.icon}
+                </motion.a>
+              ))}
             </div>
-          </div>
 
-          {/* Profile Image for Larger Screens */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.1 }} // Slide from right
-            animate={{ opacity: 1, scale: 1 }} // Fade in and slide to center
-            transition={{ duration: 0, delay: 0 }}
-            className="hidden sm:block ml-36 sm:m-0 rounded-full shadow-lg p-1 shadow-green-400 border-green-400 border-4 transform hover:scale-105 transition duration-1000"
-          >
+            <motion.a
+              href="https://resume-builder-ten-red.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="flex items-center gap-2 px-6 py-2.5 bg-transparent border-2 border-teal-300 hover:border-green-500 rounded-lg text-white transition-all duration-300"
+            >
+              <span>Download CV</span>
+              <HiOutlineDownload className="text-xl" />
+            </motion.a>
+          </motion.div>
+        </motion.div>
+        {/* Profile Image */}
+        <motion.div
+          initial={{ opacity: 0, scale: 0.5 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.8 }}
+          className="flex-shrink-0 w-[200px] sm:w-[250px] lg:w-[300px]"
+        >
+          <div className="relative rounded-full overflow-hidden border-4 border-green-400 shadow-lg shadow-green-400/50 transition-transform duration-300 hover:scale-105">
             <Image
               src="/image.png"
-              alt="image"
-              width={800}
-              height={200}
-              className="rounded-full"
+              alt="Noman Rajar"
+              width={300}
+              height={300}
+              className="w-full h-auto rounded-full"
+              priority
             />
-          </motion.div>
-        </div>
-      </main>
-    </>
+          </div>
+        </motion.div>
+      </div>
+    </main>
   );
 };
 
