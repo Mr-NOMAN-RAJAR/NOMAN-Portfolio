@@ -23,7 +23,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="bg-slate-950 py-20">
+    <section id="Contect" className="bg-slate-950 py-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Main Content */}
         <div className="flex flex-col lg:flex-row items-start gap-8 lg:gap-12">
