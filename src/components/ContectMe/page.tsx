@@ -40,7 +40,7 @@ const Contact = () => {
             Contact Me
           </h2>
           <p className="text-gray-400 text-sm sm:text-base max-w-xl mx-auto">
-            Feel free to reach out for collaborations, opportunities, or just to say hello. I'm always open to discussing new projects and ideas.
+            Feel free to reach out for collaborations, opportunities, or just to say hello. I&apos;m always open to discussing new projects and ideas.
           </p>
         </motion.div>
 
