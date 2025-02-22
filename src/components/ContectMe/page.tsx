@@ -38,7 +38,7 @@ const Contact = () => {
             >
               <div>
                 <h2 className="text-2xl md:text-3xl font-bold text-white mb-3">
-                  Let's Talk
+                  Let&apos;s Talk
                 </h2>
                 <p className="text-gray-400 text-sm">
                   Feel free to reach out for collaborations or just a friendly hello

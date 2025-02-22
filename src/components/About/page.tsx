@@ -37,11 +37,11 @@ const About = () => {
               </h3>
               
               <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-                I'm a passionate Frontend Developer with expertise in creating responsive and intuitive web applications. With a strong foundation in modern web technologies and a keen eye for design, I transform ideas into seamless digital experiences.
+                I&apos;m a passionate Frontend Developer with expertise in creating responsive and intuitive web applications. With a strong foundation in modern web technologies and a keen eye for design, I transform ideas into seamless digital experiences.
               </p>
               
               <p className="text-gray-300 text-base md:text-lg leading-relaxed">
-                My approach combines clean code practices with creative problem-solving to build user-friendly interfaces that not only look great but also perform exceptionally well. I'm constantly learning and adapting to new technologies to stay at the forefront of web development.
+                My approach combines clean code practices with creative problem-solving to build user-friendly interfaces that not only look great but also perform exceptionally well. I&apos;m constantly learning and adapting to new technologies to stay at the forefront of web development.
               </p>
             </motion.div>
           </div>
@@ -78,7 +78,7 @@ const About = () => {
             href="#Contact"
             className="inline-block bg-gradient-to-r from-indigo-600 to-pink-600 text-white px-8 py-3 rounded-xl text-lg font-semibold shadow-lg hover:shadow-indigo-500/25 transition-all duration-300 hover:-translate-y-1"
           >
-            Let's Work Together
+            Let&apos;s Work Together
           </a>
         </motion.div>
       </div>

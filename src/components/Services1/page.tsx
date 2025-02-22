@@ -1,7 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
 import { FaCode, FaPaintBrush, FaMobileAlt, FaChevronRight } from 'react-icons/fa';
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 
 interface Service {
   icon: JSX.Element;
@@ -19,8 +19,8 @@ const Services = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  // Function to handle scroll and update active dot
-  const handleScroll = () => {
+  // Move handleScroll to useCallback
+  const handleScroll = useCallback(() => {
     if (!scrollRef.current) return;
     
     const scrollPosition = scrollRef.current.scrollLeft;
@@ -30,16 +30,15 @@ const Services = () => {
     if (newIndex !== activeIndex) {
       setActiveIndex(newIndex);
     }
-  };
+  }, [activeIndex]);
 
-  // Add scroll event listener
   useEffect(() => {
     const scrollElement = scrollRef.current;
     if (scrollElement) {
       scrollElement.addEventListener('scroll', handleScroll);
       return () => scrollElement.removeEventListener('scroll', handleScroll);
     }
-  }, [activeIndex]);
+  }, [handleScroll]); // Add handleScroll to dependency array
 
   const services = [
     {

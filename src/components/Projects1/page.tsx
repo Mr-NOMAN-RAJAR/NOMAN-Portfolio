@@ -1,8 +1,9 @@
 'use client';
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import { BsBoxArrowUpRight, BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
 import { FaChevronRight } from "react-icons/fa";
+import Image from "next/image";
 
 const projects = [
   {
@@ -43,7 +44,7 @@ function Project() {
   const [activeIndex, setActiveIndex] = useState(0);
   const scrollRef = useRef<HTMLDivElement>(null);
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     if (!scrollRef.current) return;
     const scrollPosition = scrollRef.current.scrollLeft;
     const cardWidth = scrollRef.current.offsetWidth;
@@ -52,7 +53,7 @@ function Project() {
     if (newIndex !== activeIndex) {
       setActiveIndex(newIndex);
     }
-  };
+  }, [activeIndex]);
 
   useEffect(() => {
     const scrollElement = scrollRef.current;
@@ -60,7 +61,7 @@ function Project() {
       scrollElement.addEventListener('scroll', handleScroll);
       return () => scrollElement.removeEventListener('scroll', handleScroll);
     }
-  }, [activeIndex]);
+  }, [handleScroll]);
 
   return (
     <section id="projects" className="bg-slate-950 py-20 px-4 sm:px-6 lg:px-8">
@@ -146,9 +147,11 @@ const DesktopProjectCard = ({ project, index }: { project: any; index: number })
     <div className="w-full lg:w-3/5 relative group">
       <div className="absolute -inset-2 bg-gradient-to-r from-cyan-500 to-teal-500 rounded-xl blur-xl opacity-30 group-hover:opacity-50 transition duration-500"></div>
       <div className="relative rounded-xl overflow-hidden">
-        <img
+        <Image
           src={project.image}
           alt={project.title}
+          width={800}
+          height={450}
           className="w-full h-auto object-cover rounded-xl shadow-2xl transform group-hover:scale-105 transition duration-500"
         />
       </div>
@@ -217,9 +220,11 @@ const MobileProjectCard = ({ project, index }: { project: any; index: number }) 
   >
     <div className="relative group">
       <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-teal-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-      <img
+      <Image
         src={project.image}
         alt={project.title}
+        width={400}
+        height={225}
         className="w-full h-[200px] object-cover transform group-hover:scale-105 transition duration-500"
       />
     </div>

@@ -43,7 +43,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-purple-400 text-base sm:text-lg lg:text-xl mb-2"
           >
-            Hello, it's me
+            Hello, it&apos;s me
           </motion.h3>
 
           <motion.h1
@@ -61,7 +61,8 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.6 }}
             className="text-xl sm:text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-cyan-300 to-cyan-200 bg-clip-text text-transparent mb-4"
           >
-            I'm a Frontend Developer & Web Designer
+
+            I&apos;m a Frontend Developer & Web Designer
           </motion.h2>
 
           <motion.p
