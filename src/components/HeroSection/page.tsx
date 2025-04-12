@@ -56,14 +56,42 @@ const HeroSection = () => {
           </motion.h1>
 
           <motion.h2
+  initial="hidden"
+  animate="visible"
+  variants={{
+    hidden: { opacity: 1 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05, // Faster delay between each character
+        repeat: Infinity, // Loop the animation
+        repeatDelay: 0.5, // Shorter delay before repeating
+      },
+    },
+  }}
+  className="text-xl sm:text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-cyan-300 to-cyan-200 bg-clip-text text-transparent mb-4"
+>
+  {`I'm a Frontend Developer & Web Designer`.split("").map((char, index) => (
+    <motion.span
+      key={index}
+      variants={{
+        hidden: { opacity: 0 },
+        visible: { opacity: 1 },
+      }}
+    >
+      {char === " " ? "\u00A0" : char}
+    </motion.span>
+  ))}
+</motion.h2>
+
+          {/* <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
             className="text-xl sm:text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-cyan-300 to-cyan-200 bg-clip-text text-transparent mb-4"
           >
-
             I&apos;m a Frontend Developer & Web Designer
-          </motion.h2>
+          </motion.h2> */}
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}

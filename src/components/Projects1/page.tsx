@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import React, { useState, useRef, useEffect, useCallback } from "react";
 import { BsBoxArrowUpRight, BsGithub } from "react-icons/bs";
 import { motion } from "framer-motion";
@@ -8,36 +8,40 @@ import Image from "next/image";
 const projects = [
   {
     title: "Dynamic Resume Builder",
-    description: "A TypeScript-based app for dynamically generating and customizing resumes with real-time editing capabilities. Features include multiple templates, live preview, and PDF export.",
+    description:
+      "A TypeScript-based app for dynamically generating and customizing resumes with real-time editing capabilities. Features include multiple templates, live preview, and PDF export.",
     tech: ["HTML5", "CSS", "Tailwind CSS", "TypeScript", "Next.js"],
     liveDemo: "https://resume-builder-tilv.vercel.app/",
     github: "https://github.com/username/resume-builder",
-    image: "/resume-builder.png"
+    image: "/resume-builder.png",
   },
   {
     title: "Perfume Brand Website",
-    description: "Experience the art of fine fragrance with our perfume collection, crafted to evoke elegance, charm, and unforgettable memories, leaving a lasting impression wherever you go.",
+    description:
+      "Experience the art of fine fragrance with our perfume collection, crafted to evoke elegance, charm, and unforgettable memories, leaving a lasting impression wherever you go.",
     tech: ["HTML5", "CSS", "Tailwind CSS", "TypeScript", "Next.js"],
     liveDemo: "https://perfume-brand-website.vercel.app/",
     github: "https://github.com/Mr-NOMAN-RAJAR/Perfume-Brand-Website",
-    image: "/perfume.png"
+    image: "/perfume.png",
   },
   {
     title: "Todo List App",
-    description: "An interactive to-do list application that helps users manage tasks, featuring smooth animations, persistent data storage, and intuitive task management.",
+    description:
+      "An interactive to-do list application that helps users manage tasks, featuring smooth animations, persistent data storage, and intuitive task management.",
     tech: ["HTML5", "CSS", "Tailwind CSS", "TypeScript", "Next.js"],
     liveDemo: "https://todolist-app-kohl.vercel.app/",
     github: "https://github.com/username/resume-builder",
-    image: "/todolist.png"
+    image: "/todolist.png",
   },
   {
     title: "Portfolio Website",
-    description: "A responsive, visually appealing personal portfolio showcasing skills, projects, and achievements with modern design and smooth animations.",
+    description:
+      "A responsive, visually appealing personal portfolio showcasing skills, projects, and achievements with modern design and smooth animations.",
     tech: ["HTML5", "CSS", "Tailwind CSS", "TypeScript", "Next.js"],
     liveDemo: "https://noman-portfolioweb.vercel.app/",
     github: "https://github.com/username/resume-builder",
-    image: "/portfolio.png"
-  }
+    image: "/portfolio.png",
+  },
 ];
 
 function Project() {
@@ -49,7 +53,7 @@ function Project() {
     const scrollPosition = scrollRef.current.scrollLeft;
     const cardWidth = scrollRef.current.offsetWidth;
     const newIndex = Math.round(scrollPosition / cardWidth);
-    
+
     if (newIndex !== activeIndex) {
       setActiveIndex(newIndex);
     }
@@ -58,8 +62,8 @@ function Project() {
   useEffect(() => {
     const scrollElement = scrollRef.current;
     if (scrollElement) {
-      scrollElement.addEventListener('scroll', handleScroll);
-      return () => scrollElement.removeEventListener('scroll', handleScroll);
+      scrollElement.addEventListener("scroll", handleScroll);
+      return () => scrollElement.removeEventListener("scroll", handleScroll);
     }
   }, [handleScroll]);
 
@@ -112,9 +116,9 @@ function Project() {
               <div
                 key={index}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                  index === activeIndex 
-                    ? 'bg-cyan-400 scale-110' 
-                    : 'bg-gray-600'
+                  index === activeIndex
+                    ? "bg-cyan-400 scale-110"
+                    : "bg-gray-600"
                 }`}
               />
             ))}
@@ -135,13 +139,21 @@ function Project() {
   );
 }
 
-const DesktopProjectCard = ({ project, index }: { project: any; index: number }) => (
+const DesktopProjectCard = ({
+  project,
+  index,
+}: {
+  project: any;
+  index: number;
+}) => (
   <motion.div
     initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.6, delay: index * 0.2 }}
     viewport={{ once: true }}
-    className={`flex ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'} gap-8 items-center`}
+    className={`flex ${
+      index % 2 === 0 ? "flex-row" : "flex-row-reverse"
+    } gap-8 items-center`}
   >
     {/* Project Image */}
     <div className="w-full lg:w-3/5 relative group">
@@ -159,7 +171,7 @@ const DesktopProjectCard = ({ project, index }: { project: any; index: number })
 
     {/* Project Info */}
     <div className="w-full lg:w-2/5 space-y-4">
-      <motion.h3 
+      <motion.h3
         className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 to-teal-300"
         whileHover={{ scale: 1.02 }}
       >
@@ -210,7 +222,13 @@ const DesktopProjectCard = ({ project, index }: { project: any; index: number })
   </motion.div>
 );
 
-const MobileProjectCard = ({ project, index }: { project: any; index: number }) => (
+const MobileProjectCard = ({
+  project,
+  index,
+}: {
+  project: any;
+  index: number;
+}) => (
   <motion.div
     initial={{ opacity: 0, y: 20 }}
     whileInView={{ opacity: 1, y: 0 }}
